@@ -451,7 +451,7 @@ private:
 	Player &m_player;
 
 	// Starting count in 1 (1-37), slot enums are from 1 to 36, but the index always starts at 0 in c++
-	std::array<uint16_t, 37> m_wheelSlots = {};
+	std::array<uint16_t, magic_enum::enum_count<WheelSlots_t>() + 1> m_wheelSlots = {};
 	std::array<uint16_t, 4> m_bonusRevelationPoints = { 0, 0, 0, 0 };
 
 	PlayerWheelMethodsBonusData m_playerBonusData;
@@ -459,7 +459,7 @@ private:
 
 	uint8_t m_modsMaxGrade = {};
 	std::array<uint8_t, 49> m_basicGrades = { 0 };
-	std::array<uint8_t, 76> m_supremeGrades = { 0 };
+	std::array<uint8_t, 99> m_supremeGrades = { 0 };
 
 	std::array<uint8_t, static_cast<size_t>(WheelStage_t::STAGE_COUNT)> m_stages = { 0 };
 	std::array<int64_t, static_cast<size_t>(WheelOnThink_t::TOTAL_COUNT)> m_onThink = { 0 };

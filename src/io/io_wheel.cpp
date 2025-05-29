@@ -222,7 +222,7 @@ int8_t IOWheel::getSlotPrioritaryOrder(WheelSlots_t slot) const {
 		return 4;
 	}
 
-	g_logger().error("[{}] unknown whell slot type': {}", __FUNCTION__, std::to_string(slot));
+	g_logger().error("[{}] unknown wheel slot type': {}", __FUNCTION__, slot);
 	return -1;
 }
 

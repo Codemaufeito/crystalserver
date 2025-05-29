@@ -17,7 +17,7 @@
 
 #pragma once
 
-enum WheelSlots_t : uint8_t {
+enum class WheelSlots_t : uint8_t {
 	SLOT_GREEN_200 = 1,
 	SLOT_GREEN_TOP_150 = 2,
 	SLOT_GREEN_TOP_100 = 3,
@@ -65,9 +65,6 @@ enum WheelSlots_t : uint8_t {
 	SLOT_PURPLE_BOTTOM_100 = 34,
 	SLOT_PURPLE_BOTTOM_150 = 35,
 	SLOT_PURPLE_200 = 36,
-
-	SLOT_FIRST = SLOT_GREEN_200,
-	SLOT_LAST = SLOT_PURPLE_200
 };
 
 enum class WheelStageEnum_t {
@@ -75,8 +72,6 @@ enum class WheelStageEnum_t {
 	ONE = 1,
 	TWO = 2,
 	THREE = 3,
-
-	TOTAL_COUNT = 4
 };
 
 enum class WheelStagePointsEnum_t {
@@ -202,8 +197,6 @@ enum class WheelSpellBoost_t : uint8_t {
 	HEAL = 10,
 	CRITICAL_DAMAGE = 11,
 	CRITICAL_CHANCE = 12,
-
-	TOTAL_COUNT = 13
 };
 
 struct PlayerWheelMethodsBonusData {

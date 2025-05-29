@@ -48,7 +48,7 @@ public:
 		};
 
 		struct Revelation {
-			std::array<Stats, static_cast<size_t>(WheelStageEnum_t::TOTAL_COUNT)> stats = {
+			std::array<Stats, magic_enum::enum_count<WheelStageEnum_t>() + 1> stats = {
 				Stats { 4, 4 },
 				Stats { 9, 9 },
 				Stats { 20, 20 }

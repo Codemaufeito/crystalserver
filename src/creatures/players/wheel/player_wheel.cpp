@@ -2558,7 +2558,7 @@ void PlayerWheel::resetRevelationState() {
 	// First we reset the information
 	resetRevelationBonus();
 	if (!m_modifierContext) {
-		m_modifierContext = std::make_unique<WheelModifierContext>(*this, static_cast<Vocation_t>(m_player.getVocation()->getBaseId()));
+		m_modifierContext = std::make_unique<WheelModifierContext>(*this, static_cast<Vocation_t>(m_player.getVocation()->getFromVocation()));
 	}
 	m_modifierContext->resetStrategies();
 	m_spellsBonuses.clear();
@@ -3903,7 +3903,7 @@ uint16_t PlayerWheel::getPointsBySlotType(WheelSlots_t slotType) const {
 	}
 }
 
-const std::array<uint16_t, 37> &PlayerWheel::getSlots() const {
+const std::array<uint16_t, magic_enum::enum_count<WheelSlots_t>() + 1> &PlayerWheel::getSlots() const {
 	return m_wheelSlots;
 }
 
